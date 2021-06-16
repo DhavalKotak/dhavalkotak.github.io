@@ -69,11 +69,11 @@ p {
 }
 
 a {
-  color: $white;
+  color: #2fd6b5;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $red;
+    color: $white;
   }
 }
 
@@ -156,7 +156,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid #2fd6b5;
 
   @include mobile {
     text-align: center;
@@ -192,7 +192,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $white;
+  color: $red;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -273,8 +273,6 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
   background-color: #1e2130;
 }
 
