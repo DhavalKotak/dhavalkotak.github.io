@@ -2,14 +2,17 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+I'm just a super curious guy who likes to self learn web development and cyber security through research and practice.
 
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+### Field Of Interests
+- Web Development
+- Cybersecurity
+- Embedded Systems
+- Photography
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[kotakdhaval01@gmail.com](mailto:kotakdhaval01@gmail.com)
