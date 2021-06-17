@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mustacchio CTF
-published: false
+published: true
 ---
 
 Well hello people. This is a writeup of the Mustacchio CTF from Tryhackme. 
