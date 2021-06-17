@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Blog
+title: Mustacchio CTF
 published: false
 ---
 
