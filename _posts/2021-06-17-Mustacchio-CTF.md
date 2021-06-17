@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 Well hello people. This is a writeup of the Mustacchio CTF from Tryhackme. 
 It was rated as a easy level box and it’s a really interesting challenge so 
@@ -127,7 +127,7 @@ After using strings on the binary file we see this interesting line
 
 > tail -f /var/log/nginx/access.log
 
-Intresting. Lets use this to gain root. Lets create a file named tail and make it executable and a script to get root. We also have to change the path to our file 
+Intresting. Lets use this to gain root. Lets create a file named tail and make it executable and a script to get root. We have to change the path to our file as well
 
 > echo "/bin/bash" > tail
 
