@@ -17,11 +17,10 @@ Room : [Mustacchio](https://tryhackme.com/room/mustacchio)
 >  nmap -p- IPADDR
 
 We get the following ports open :
-```
-- 22 ssh
-- 80 http
-- 8765 ultraseek-http
-```
+
+ - 22 ssh
+ - 80 http
+ - 8765 ultraseek-http
 
 So after scanning we know there is a website running on this machine so lets hope on to it and have a look.
 
@@ -39,10 +38,7 @@ After the scan you can see we got some directories. Most of them are dead ends b
 
 After using crackstation to crack the password we get the following credentails :
 
-```
-admin
-bulldog19
-```
+``` admin:bulldog19 ```
 
 Now, lets check the 8765 port 
 
@@ -68,18 +64,16 @@ We can try to read the id_rsa file on barry from the machine by attempting bindi
 <comment>
   <name>Joe Hamd</name>
   <author>Barry Clad</author>
-
   <com>&xxe;</com>
 </comment>
 ```
 
 And we get the id_rsa but we have to format it properly by adding spaces and line breaks otherwise it will give an error while logging it.
 
-```
------BEGIN RSA PRIVATE KEY-----
+
+> -----BEGIN RSA PRIVATE KEY-----
 Proc-Type: 4,ENCRYPTED
 DEK-Info: AES-128-CBC,D137279D69A43E71BB7FCB87FC61D25E
-
 jqDJP+blUr+xMlASYB9t4gFyMl9VugHQJAylGZE6J/b1nG57eGYOM8wdZvVMGrfN
 bNJVZXj6VluZMr9uEX8Y4vC2bt2KCBiFg224B61z4XJoiWQ35G/bXs1ZGxXoNIMU
 MZdJ7DH1k226qQMtm4q96MZKEQ5ZFa032SohtfDPsoim/7dNapEOujRmw+ruBE65
@@ -106,7 +100,7 @@ ckQU/dcZcx9UXoIFhx7DesqroBTR6fEBlqsn7OPlSFj0lAHHCgIsxPawmlvSm3bs
 +Z87nFImxw95dxVvoZXZvoMSb7Ovf27AUhUeeU8ctWselKRmPw56+xhObBoAbRIn
 7mxN/N5LlosTefJnlhdIhIDTDMsEwjACA+q686+bREd+drajgk6R9eKgSME7geVD
 -----END RSA PRIVATE KEY-----
-```
+
 
 
 ## John The Ripper
