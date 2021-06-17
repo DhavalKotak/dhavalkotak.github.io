@@ -148,7 +148,4 @@ Now lets run the `live_log` binary.
 
 ![]({{site.baseurl}}/images/mustacchio/root.png)
 
-And that's it. We got root. This was a fun box. Though i have to admit i had to take some hints on the way but still it was a great learning experience.
-
-
-
+And that's it. We got root. This was a fun box. Though i have to admit i had to take some hints on the way but still it was a great learning experience. Hope you enjoyed this as well :)
