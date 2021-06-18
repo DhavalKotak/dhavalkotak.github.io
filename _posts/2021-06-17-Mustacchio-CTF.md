@@ -49,11 +49,11 @@ And we are in! Lets look at the source code.
 
 ![]({{site.baseurl}}/images/mustacchio/source.png)
 
-We see these two intersting comments. The 2nd one tells us a username for the SSH login which is Barry. The 1st is looks like a path. After checking the path we get a dontforget.bak file with some XML code written in it.
+We see these two interesting comments. The 2nd one tells us a username for the SSH login which is Barry. The 1st looks like a path. After checking the path we get a dontforget.bak file with some XML code written in it.
 
 ## XXE
 
-We can try to read the id_rsa file on barry from the machine by attempting binding a payload to the sample XML code we got from the dontforget.bak file
+We can try to read the id_rsa file on barry from the machine by binding a payload to the sample XML code we got from the dontforget.bak file
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -110,9 +110,9 @@ Now lets crack the id_rsa as it is requires a passpharse to login
 
 And we get the passphrase : ``` urieljames```
 
-## Loggin into SSH
+## Logging into SSH
 
-After loggin in we get the user flag right away
+After logging in we get the user flag right away
 
 ![]({{site.baseurl}}/images/mustacchio/loginSSH.png)
 
