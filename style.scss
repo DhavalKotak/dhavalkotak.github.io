@@ -33,10 +33,6 @@ body {
   padding: 0 10px;
   width: 100%;
   
-  @include tablet {
-  	max-width: 768px;
-  }
-  
   @include mobile {
   	max-width: 550px;
   }
@@ -268,7 +264,7 @@ nav {
 }
 
 .language-XML{
-	@inculde tablet{
+	@inculde mobile{
     	font-size: 16px;
     }
 }
