@@ -263,9 +263,11 @@ nav {
   border-bottom: none;
 }
 
-.language-XML{
-	@inculde mobile{
-    	font-size: 16px;
+pre{
+	code{
+      @inculde mobile{
+          font-size: 16px;
+      }
     }
 }
 
