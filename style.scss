@@ -70,6 +70,10 @@ h4 {
 
 p {
   margin: 15px 0;
+  
+  @include mobile{
+  	font-size 16px;
+  }
 }
 
 a {
@@ -273,14 +277,6 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
   }
-}
-
-blockquote {
-	p {
-        @include mobile {
-        	font-size: 16px;
-        }
-    }
 }
 
 .wrapper-footer {
