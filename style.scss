@@ -21,6 +21,10 @@ body {
 	background: $darkBlue;
   font: 18px/1.4 $helvetica;
   color: $white;
+  
+  @include mobile {
+  	font-size 16px;
+  }
 }
 
 .container {
@@ -30,7 +34,7 @@ body {
   width: 100%;
   
   @include mobile {
-  	max-width: 540px;
+  	max-width: 550px;
   }
 }
 
@@ -259,6 +263,12 @@ nav {
   border-bottom: none;
 }
 
+pre{
+	@inculde mobile{
+    	font-size: 16px;
+    }
+}
+
 .post {
   blockquote {
     font-family: monospace;
@@ -267,6 +277,10 @@ nav {
     padding: 0.1em 1em;
     color: $white;
     font-size: 22px;
+    
+    @include mobile {
+    	font-size : 16px;
+    }
   }
 
   .comments {
