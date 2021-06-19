@@ -21,23 +21,22 @@ So lets get started.
 We get the following result :
 
 
-    Starting Nmap 7.91 ( https://nmap.org ) at 2021-06-19 15:35 IST
-    Nmap scan report for 10.10.214.54
-    Host is up (0.24s latency).
-    Not shown: 998 closed ports
-    PORT   STATE SERVICE VERSION
-    22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
-    | ssh-hostkey: 
-    |   2048 4b:0e:bf:14:fa:54:b3:5c:44:15:ed:b2:5d:a0:ac:8f (RSA)
-    |   256 d0:3a:81:55:13:5e:87:0c:e8:52:1e:cf:44:e0:3a:54 (ECDSA)
-    |_  256 da:ce:79:e0:45:eb:17:25:ef:62:ac:98:f0:cf:bb:04 (ED25519)
-    80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
-    |_http-server-header: Apache/2.4.29 (Ubuntu)
-    |_http-title: Apache2 Ubuntu Default Page: It works
-    Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-
-    Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-    Nmap done: 1 IP address (1 host up) scanned in 55.95 seconds
+> Starting Nmap 7.91 ( https://nmap.org ) at 2021-06-19 15:35 IST
+ Nmap scan report for 10.10.214.54
+ Host is up (0.24s latency).
+ Not shown: 998 closed ports
+ PORT   STATE SERVICE VERSION
+ 22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+ | ssh-hostkey: 
+ |   2048 4b:0e:bf:14:fa:54:b3:5c:44:15:ed:b2:5d:a0:ac:8f (RSA)
+ |   256 d0:3a:81:55:13:5e:87:0c:e8:52:1e:cf:44:e0:3a:54 (ECDSA)
+ |_  256 da:ce:79:e0:45:eb:17:25:ef:62:ac:98:f0:cf:bb:04 (ED25519)
+ 80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+ |_http-server-header: Apache/2.4.29 (Ubuntu)
+ |_http-title: Apache2 Ubuntu Default Page: It works
+ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+ Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+ Nmap done: 1 IP address (1 host up) scanned in 55.95 seconds
 
 
 We already got the answers of the first 4 questions.
