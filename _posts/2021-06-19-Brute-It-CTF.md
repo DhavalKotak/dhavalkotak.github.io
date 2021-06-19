@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 Well hello and welcome to another writeup of a room called brute it from tryhackme. It involves
@@ -8,6 +8,7 @@ Well hello and welcome to another writeup of a room called brute it from tryhack
 - Hash cracking
 - Privilege Escalation
 
+![]({{site.baseurl}}/images/brute_it/room.jpg)
 
 Room : [Brute it](https://tryhackme.com/room/bruteit)
 
@@ -42,6 +43,8 @@ Nmap done: 1 IP address (1 host up) scanned in 55.95 seconds
 We already got the answers of the first 4 questions.
 
 So now lets hop on to the website
+
+![]({{site.baseurl}}/images/brute_it/site.png)
 
 ## Scanning for Web Directories
 
@@ -78,6 +81,8 @@ Explaination :
 
 After running hydra we get the password ```xavier```. So lets log in.
 
+![]({{site.baseurl}}/images/brute_it/john.png)
+
 We get the RSA key and the web flag.
 
 ## John The Ripper
@@ -94,11 +99,15 @@ And we get the passpharse.
 
 Lets try to log into ssh using john as a username as we saw that in the previous comment
 
+![]({{site.baseurl}}/images/brute_it/sshlogin.png)
+
 And we are in!! We get the user flag right away in john's directory.
 
 ## Privilege Escalation
 
 Now lets look for SUIDs by running ``` sudo -l```
+
+![]({{site.baseurl}}/images/brute_it/suid.png)
 
 We can run ```cat``` as sudo. Looking on [GTFOBins](https://gtfobins.github.io/) I find that this will allow me to read any file. So now lets try to read the ```/etc/shadow``` file.
 
@@ -112,18 +121,6 @@ And we get the root hash. However I also found out that you can just cat the sha
 
 Now lets login.
 
-There you go! We completed this challenge and got all the flags! This one was a web based challenge which is a category on which I suck but still it was pretty simple and straight forward.
+![]({{site.baseurl}}/images/brute_it/root.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+There you go! We completed this challenge and got all the flags! This one was a web based challenge which is a category on which I suck but still it was pretty simple and straight forward. See you next time :)
