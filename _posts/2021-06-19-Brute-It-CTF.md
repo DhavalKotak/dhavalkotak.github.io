@@ -2,7 +2,7 @@
 published: true
 ---
 
-Well hello and welcome to another writeup of a room called brute it from tryhackme. It involves
+Well hello and welcome to another writeup of a room called brute it from tryhackme. It involves :
 
 - Brute forcing
 - Hash cracking
@@ -111,8 +111,8 @@ Now lets look for SUIDs by running ``` sudo -l```
 
 We can run ```cat``` as sudo. Looking on [GTFOBins](https://gtfobins.github.io/) I find that this will allow me to read any file. So now lets try to read the ```/etc/shadow``` file.
 
-> LFILE=/etc/shadow
-sudo cat "$LFILE"
+> LFILE=/etc/shadow                                                                                         
+ sudo cat "$LFILE"
 
 And we get the root hash. However I also found out that you can just cat the shadow file as sudo without doing the above process. After reading the hash i copied it over to my machine and used john to get the password.
 
