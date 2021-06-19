@@ -52,9 +52,9 @@ So now lets hop on to the website
 
 After scanning we get a /admin directory which has the following login page. Well we don't have the username or the password but after checking the source code we get the following comment :
 
-```
-<!-- Hey john, if you do not remember, the username is admin -->
-```
+
+> <!-- Hey john, if you do not remember, the username is admin -->
+
 Pretty secure huh?
 
 ## Hail Hydra
@@ -111,10 +111,9 @@ Now lets look for SUIDs by running ``` sudo -l```
 
 We can run ```cat``` as sudo. Looking on [GTFOBins](https://gtfobins.github.io/) I find that this will allow me to read any file. So now lets try to read the ```/etc/shadow``` file.
 
-```
-LFILE=/etc/shadow
+> LFILE=/etc/shadow
 sudo cat "$LFILE"
-```
+
 And we get the root hash. However I also found out that you can just cat the shadow file as sudo without doing the above process. After reading the hash i copied it over to my machine and used john to get the password.
 
 > john --wordlist=/usr/share/wordlists/rockyou.txt rhash
