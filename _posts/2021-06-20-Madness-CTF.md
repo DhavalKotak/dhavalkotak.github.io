@@ -1,11 +1,13 @@
 ---
-published: false
+published: true
 ---
 
 Bonjour people. This is a writeup of a room called Madness on tryhackme. It involves : 
 
 - Stegnography
 - Web
+
+![]({{site.baseurl}}/images/madness/madness.png)
 
 Room : [Madness CTF](https://tryhackme.com/room/madness)
 
@@ -24,9 +26,17 @@ Lets take a look at the website.
 
 ## Web Stuff and Hexeditor
 
+![]({{site.baseurl}}/images/madness/site.png)
+
 There is a photo on the top and there seems to be some problem with it. Lets look at the source to check it.
 
+![]({{site.baseurl}}/images/madness/source.png)
+
 As we see in the above image there is a ```thm.jpg``` image that is broken. So lets first download the images with wget and try to see whats wrong.
+
+![]({{site.baseurl}}/images/madness/wget.png)
+
+![]({{site.baseurl}}/images/madness/head.png)
 
 Well that is wierd. The image header is of a PNG instead of a JPG. So lets fix that with ```hexeditor```.
 
@@ -40,7 +50,11 @@ To
 
 Now lets look at the image.
 
+![]({{site.baseurl}}/images/madness/thmImage.png)
+
 We got a hidden directory for the website, so lets check it. 
+
+![]({{site.baseurl}}/images/madness/hiddendir.png)
 
 We need a secret code for this. After checking the source of this page we found out that the code is between 0-99. And we also find that we have to give the number with ```secret``` as a parameter in the URL. To do this I made a shell script to loop through 0-99 and collect the response by requesting the website with different numbers as parameter. Here is the script :
 
@@ -56,13 +70,25 @@ done
 
 After running this we get a file called result with all the responses from the website. After checking it we see our lucky number.
 
+![]({{site.baseurl}}/images/madness/bruteSeceretCode.png)
+
 ## Stegnography
 
 This one took a while for me to figure out as i was trying to decryprt the text. But it had a different purpose. It was a passphrase for the ```thm.jpg``` image we got. Lets run stegseek and enter the passphrase.
 
-After deciphering it with ROT13 the username we get is ```joker```. But now what? We don't have a password. This was the moment when the creater of the room was laughing at us. You can see that there is an image on the room page on tryhackme right? You have to steg that image to get the password
+![]({{site.baseurl}}/images/madness/stegseek.png)
+
+After deciphering it with ROT13 the username we get is ```joker```. But now what? We don't have a password. This was the moment when the creater of the room was laughing at us. You can see that there is an image on the room page on tryhackme right?
+
+![]({{site.baseurl}}/images/madness/roomImage.png)
+
+You have to steg that image to get the password
+
+![]({{site.baseurl}}/images/madness/password.png)
 
 ## SSH Login
+
+![]({{site.baseurl}}/images/madness/sshLogin.png)
 
 We get the user flag right away after logging in
 
@@ -70,6 +96,6 @@ We get the user flag right away after logging in
 
 After running ```find /bin -perm -4000``` I saw a script called ```screen-4.5.0```. So i looked online and found an exploit right away that gives us root privileges. You can check it [here](https://www.exploit-db.com/exploits/41154). I made a script in ```/tmp``` and made it executable and after running it I had root.
 
+![]({{site.baseurl}}/images/madness/root.png)
+
 And that was it. The challenge is completed. This box was really fun tbh. Hope you enjoyed the it as well. See you next time :)
-
-
