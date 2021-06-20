@@ -59,13 +59,13 @@ We got a hidden directory for the website, so lets check it.
 We need a secret code for this. After checking the source of this page we found out that the code is between 0-99. And we also find that we have to give the number with ```secret``` as a parameter in the URL. To do this I made a shell script to loop through 0-99 and collect the response by requesting the website with different numbers as parameter. Here is the script :
 
 
->#!/bin/sh
- i=0
- while [ $i -le 99 ]
- do 
-	curl -L http://IPADDR/th1s_1s_h1dd3n?secret=$i >> result
-   	i = `expr $i + 1`
- done
+> #!/bin/sh                                                                                                 
+   i=0                                                                                                       
+   while [ $i -le 99 ]                                                                                       
+   do                                                                                                       
+	  curl -L http://IPADDR/th1s_1s_h1dd3n?secret=$i >> result                                               
+   	  i = `expr $i + 1`                                                                                     
+   done
 
 
 After running this we get a file called result with all the responses from the website. After checking it we see our lucky number.
