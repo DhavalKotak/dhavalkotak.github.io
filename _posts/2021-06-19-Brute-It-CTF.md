@@ -37,7 +37,7 @@ So now lets hop on to the website.
 After scanning we get a /admin directory which has the following login page. Well we don't have the username or the password but after checking the source code we get the following comment :
 
 
-> <!-- Hey john, if you do not remember, the username is admin -->
+> Hey john, if you do not remember, the username is admin
 
 Pretty secure huh?
 
