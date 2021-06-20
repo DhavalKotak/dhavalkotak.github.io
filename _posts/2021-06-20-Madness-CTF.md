@@ -2,7 +2,7 @@
 published: true
 ---
 
-Bonjour people. This is a writeup of a room called Madness on tryhackme. It involves : 
+Bonjour people. This is a writeup of a room called Madness on tryhackme. It involves: 
 
 - Stegnography
 - Web
