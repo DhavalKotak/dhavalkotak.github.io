@@ -73,7 +73,7 @@ Now lets crack the id_rsa as it is requires a passpharse to login
 
 > /opt/johnTheRipper/ssh2John.py id_rsa  hash
 
-> john hash --wordlist=/path/to/worlist
+> john hash --wordlist=/path/to/wordlist
 
 And we get the passphrase : ``` urieljames```
 
