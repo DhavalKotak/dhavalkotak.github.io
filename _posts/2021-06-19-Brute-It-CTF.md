@@ -32,7 +32,7 @@ So now lets hop on to the website.
 
 ## Scanning for Web Directories
 
-> gobuster dir -u http://IPADDR -w /usr/share/wordlists/dirb/common.txt
+> gobuster dir -u http://IPADDR -w /path/to/wordlists
 
 After scanning we get a /admin directory which has the following login page. Well we don't have the username or the password but after checking the source code we get the following comment :
 
@@ -45,13 +45,13 @@ Pretty secure huh?
 
 Now lets bruteforce the login page with hydra 
 
-> hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.118.163 http-post-form "/admin/index.php:user=^USER^&pass=^PASS^:Username or password invalid"
+> hydra -l admin -P /path/to/wordlist 10.10.118.163 http-post-form "/admin/index.php:user=^USER^&pass=^PASS^:Username or password invalid"
 
 Explaination : 
 
 ```-l admin``` : Specifying the username
 
-```-P /usr/share/wordlists/rockyou.txt``` : Specifying the password dictionary
+```-P /path/to/wordlist``` : Specifying the password dictionary
 
 ```10.10.118.163``` : The Target IP
 
@@ -75,7 +75,7 @@ Now lets crack the id_rsa as it is requires a passpharse to login
 
 > /opt/JohnTheRipper/ssh2John.py id_rsa > hash
 
-> john hash --wordlist=/usr/share/wordlists/rockyou.txt
+> john hash --wordlist=/path/to/wordlist
 
 And we get the passpharse.
 
@@ -100,7 +100,7 @@ We can run ```cat``` as sudo. Looking on [GTFOBins](https://gtfobins.github.io/)
 
 And we get the root hash. However I also found out that you can just cat the shadow file as sudo without doing the above process. After reading the hash i copied it over to my machine and used john to get the password.
 
-> john --wordlist=/usr/share/wordlists/rockyou.txt rhash
+> john --wordlist=/path/to/wordlist rhash
 
 Now lets login.
 
